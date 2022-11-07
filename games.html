@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./games.css" />
+    <link rel="stylesheet" href="./index.js" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+
+    
+    <title>Games</title>
+  </head>
+  <body>
+    <header>
+      <nav class="header-main">
+        <img
+          src="./images/logo-desktop.png"
+          alt="Jovem Nerd"
+          class="logo"
+        />
+        <div class="navigation">
+          <ul class="list">
+            <li>NerdCast</li>
+            <li>NerdOffice</li>
+            <li>NerdPayer</li>
+            <li>DesenKaixa</li>
+            <li class="item has-submenu">
+              <a>Mais <i class="ia">▼</i></a>
+            </li>
+            <li>Anuncie</li>
+          </ul>
+          <div class="search">
+            <input type="text" name="s" id="s" placeholder="EX: NC 500" />
+            <button class="close-search-modal">
+              Buscar
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                fill="currentColor"
+                class="bi bi-search"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="modo-escuro">
+            <button id="darkmode" onclick="darkmode()">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="25"
+                height="25"
+                fill="currentColor"
+                class="bi bi-lightbulb"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13a.5.5 0 0 1 0 1 .5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1 0-1 .5.5 0 0 1 0-1 .5.5 0 0 1-.46-.302l-.761-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6zm6-5a5 5 0 0 0-3.479 8.592c.263.254.514.564.676.941L5.83 12h4.342l.632-1.467c.162-.377.413-.687.676-.941A5 5 0 0 0 8 1z"
+                />
+              </svg>
+              Modo Escuro
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="submenu">
+      <div class="dropdown">
+        <a href="#"
+          ><img
+            src="./images/nerdbunker.png"
+            alt="NerdBunker"
+            class="nerdbunker"
+            id="drop"
+            onmouseenter="drop()"
+        /></a>
+        <div class="dropdown-content" id="menu-drop">
+          <ul onmouseleave="dropOff()">
+            <li onmouseenter="drop2()">
+              <div class="round" id="r1"></div>
+              Direto do Bunker &nbsp;<svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-caret-right-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"
+                />
+              </svg>
+            </li>
+            <li>
+              <div class="round" id="r2"></div>
+              Filmes
+            </li>
+            <li>
+              <div class="round" id="r3"></div>
+              Séries e TV
+            </li>
+            <li>
+              <div class="round" id="r4"></div>
+              Animes e Mangás
+            </li>
+            <li>
+              <div class="round" id="r5"></div>
+              <a href="games.html">Games</a>
+            </li>
+            <li>
+              <div class="round" id="r6"></div>
+              HQs e Livros
+            </li>
+            <li>
+              <div class="round" id="r7"></div>
+              Ciência e Tecnologia
+            </li>
+            <li>
+              <div class="round" id="r8"></div>
+              Etc
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <ul class="list2">
+        <li>God of War</li>
+        <li>Halloween</li>
+        <li>Pantera Negra 2</li>
+        <li>Adão Negro</li>
+        <li>Lá do Bunker</li>
+      </ul>
+      <div class="separator"></div>
+    </div>
+
+    <script rel="stylesheet" type="text/javascript" src="index.js"></script>
+
+    
+    
+    <div class="separator-main">
+      <div class="container">
+        <div class="row">
+          <div class="col align-self-start">
+            <p>Home » Games</p>
+            <h1><div class="border-blue"></div> Games</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container">
+    <article class="article">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="./images/kojima_jogo.png" class="img-fluid rounded-start pointer" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <p class="card-title games">Games</p>
+              <p class="card-text data">2 de novembro de 2022</p>
+              <h4 class="titulo">Próximo jogo de Kojima ganha novo<br>  pôster misterioso com a atriz Shiori<br>  Kutsuna</h4>
+              <p class="card-text descricao">"Onde eu estou?"</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  
+
+
+<div class="container">
+
+    <article class="article-img-space-top">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="./images/destroy_all_humans.png" class="img-fluid rounded-start pointer" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <p class="card-title games">Games</p>
+            <p class="card-text data">2 de novembro de 2022</p>
+            <h4 class="titulo">Destroy All Humans! Clone Carnage<br> se torna gratuito para jogar. </h4>
+            <p class="card-text descricao">O jogo é um multiplayer da franquia</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+
+<div class="container">
+  <article class="article-img-space-top">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="./images/playstation_vr2.png" class="img-fluid rounded-start pointer" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <p class="card-title games">Games</p>
+          <p class="card-text data">2 de novembro de 2022</p>
+          <h4 class="titulo">PlayStation VR2 ganha data de<br> lançamento e preço no Brasil</h4>
+          <p class="card-text descricao">Os óculos de realidade virtual da PlayStation vão <br> chegar por R$ 4.499,99
+        </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+</div>
+
+
+
+<div class="container">
+<article class="article-img-space-top">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="./images/fadarksouls.png" class="img-fluid rounded-start pointer" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <p class="card-title games">Games</p>
+        <p class="card-text data">2 de novembro de 2022</p>
+        <h4 class="titulo">Fã brasileiro imagina como Dark <br> Souls seria no estilo de Resident <br> Evil</h4>
+        <p class="card-text descricao">Um cavaleiro derrotando inimigos em cenários<br> limitados, com câmeras fixas e controles de tanque</p>
+      </div>
+    </div>
+  </div>
+</div>
+</article>
+</div>
+
+
+<div class="container">
+<article class="article-img-space-top">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="./images/god_of_war_ragnarok.png" class="img-fluid rounded-start pointer" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <p class="card-title games">Games/p>
+        <p class="card-text data">2 de novembro de 2022</p>
+        <h4 class="titulo">God of War Ragnarok ganha<br> comercial ao estilo de programas de<br> TV do Japão
+           </h4>
+        <p class="card-text descricao"> Sim, é tão bizarro quanto você imagina</p>
+      </div>
+    </div>
+  </div>
+</div>
+</article>
+
+
+<div class="container">
+<article class="article-img-space-top">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="./images/atomic.png" class="img-fluid rounded-start pointer" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <p class="card-title games">Games</p>
+        <p class="card-text data">2 de novembro de 2022</p>
+        <h4 class="titulo">Atomic Heart, shooter com estética<br>  retrofuturista,será lançado em <br> fevereiro</h4>
+        <p class="card-text descricao">Novo trailer mostra muita porradaria, tiroteio e <br>máquinas assassinas</p>
+      </div>
+    </div>
+  </div>
+</div>
+</article>
+
+
+<div class="container">
+<article class="article-img-space-top">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="./images/jogos_bonitinhos.png" class="img-fluid rounded-start pointer" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <p class="card-title games">Games</p>
+        <p class="card-text data">2 de novembro de 2022</p>
+        <h4 class="titulo">Conheça 5 jogos curtos e<br>  bonitinhos para jogar no feriado </h4>
+        <p class="card-text descricao">Nesse mundo de ação desenfreada, existem os <br>jogadores que só querem uma gameplay tranquila<br> com gráficos fofos
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+</article>
+
+
+<div class="container">
+<article class="article-img-space-top">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="./images/fortnite.png" class="img-fluid rounded-start pointer" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <p class="card-title games">Games</p>
+        <p class="card-text data">1 de novembro de 2022</p>
+        <h4 class="titulo">Luke, Han Solo e Leia, de Star Wars,<br> chegam ao Fortnite</h4>
+        <p class="card-text descricao">Trio da trilogia clássica estará disponível até o dia 8<br>  como parte da Semana Skywalker
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+</article>
+
+
+<div class="container">
+<article class="article-img-space-top">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="./images/fifa_23.png" class="img-fluid rounded-start pointer" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <p class="card-title games">Games</p>
+        <p class="card-text data">1 de novembro de 2022</p>
+        <h4 class="titulo">FIFA 23 receberá modo da Copa do<br>  Mundo este mês </h4>
+        <p class="card-text descricao">Plano B para garantir o Hexa se ele não vier na vida<br>  real…
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+</article>
+
+
+<div class="container">
+<article class="article-img-space-top">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="./images/playstation.png" class="img-fluid rounded-start pointer" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <p class="card-title games">Games</p>
+        <p class="card-text data">1 de novembro de 2022</p>
+        <h4 class="titulo">PS Plus perde 1,9 milhão de<br> assinantes após relançamento
+        </h4>
+        <p class="card-text descricao">Diretor financeiro da Sony acredita que um marketing<br> melhor pode resolver a situação a longo prazo</p>
+      </div>
+    </div>
+  </div>
+</div>
+</article>
+
+
+<div class="container">
+<article class="article-img-space-top">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="./images/game_pass_novembro.png" class="img-fluid rounded-start pointer" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <p class="card-title games">Games</p>
+        <p class="card-text data">1 de novembro de 2022</p>
+        <h4 class="titulo">Game Pass: Ghost Song, Return to<br> Monkey Island, Somerville e mais<br> jogos em novembro
+        </h4>
+        <p class="card-text descricao">Microsoft revelou vários títulos que chegarão ao <br>serviço de streaming por assinatura neste mês
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+</article>
+
+
+<div class="container">
+<article class="article-img-space-top">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="./images/sonic_frontiers.png" class="img-fluid rounded-start pointer" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <p class="card-title games">Games</p>
+        <p class="card-text data">1 de novembro de 2022</p>
+        <h4 class="titulo">SEGA revela prólogo de Sonic Frontiers
+        </h4>
+        <p class="card-text descricao">Jogo do ouriço azul chega agora no comecinho de novembro
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+</article>
+
+
+<div class="container">
+<article class="article-img-space-top">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="./images/god_of_war.png" class="img-fluid rounded-start pointer" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <p class="card-title games">Games</p>
+        <p class="card-text data">1 de novembro de 2022</p>
+        <h4 class="titulo">God of War de 2018 ultrapassa 23<br> milhões de cópias vendidas
+        </h4>
+        <p class="card-text descricao">Trama com Kratos teve pico de vendas às vésperas<br> do lançamento de Ragnarok
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+</article>
+
+
+<div class="container">
+<article class="article-img-space-top">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="./images/god_of_war_ben.png" class="img-fluid rounded-start pointer" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <p class="card-title games">Games</p>
+        <p class="card-text data">1 de novembro de 2022</p>
+        <h4 class="titulo">Ben Stiller vira Kratos em divertido<br> comercial de God of War Ragnarok
+        </h4>
+        <p class="card-text descricao">Rolê aleatório tem também John Travolta e LeBron<br> James
+    </p>
+      </div>
+    </div>
+  </div>
+</div>
+</article>
+
+
+<div class="container">
+<article class="article-img-space-top">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="./images/ps2_jogos.png" class="img-fluid rounded-start pointer" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <p class="card-title games">Games</p>
+        <p class="card-text data">1 de novembro de 2022</p>
+        <h4 class="titulo">Colecionador digitaliza todos os <br>manuais de jogos para PS2<br> lançados nos EUA
+        </h4>
+        <p class="card-text descricao">Foram necessários 22 anos e US$ 40.000 em games<br> para construir tal biblioteca digital
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+</article>
+
+
+<div class="container">
+<article class="article-img-space-top">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="./images/andarilho.png" class="img-fluid rounded-start pointer" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <p class="card-title games">Games</p>
+        <p class="card-text data">31 de outubro de 2022</p>
+        <h4 class="titulo">Genshin Impact revela novos<br> personagens e modo de jogo</h4>
+        <p class="card-text descricao">Novidades ficarão disponíveis em 7 de dezembro</p>
+      </div>
+    </div>
+  </div>
+</div>
+</article>
+
+<div class="container">
+<article class="article-img-space-top">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="./images/stay_out.png" class="img-fluid rounded-start pointer" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <p class="card-title games">Games</p>
+        <p class="card-text data">31 de outubro de 2022</p>
+        <h4 class="titulo">Stay Out of the House | Review</h4>
+        <p class="card-text descricao">Inspirado por Massacre da Serra Elétrica e Quadrilha<br> de Sádicos, Puppet Combo entrega o seu melhor<br> jogo até hoje</p>
+      </div>
+    </div>
+  </div>
+</div>
+</article>
+</div>
+
+<div class="container">
+<article class="article-img-space-top">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="./images/marvel_ea_games.png" class="img-fluid rounded-start pointer" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <p class="card-title games">Games</p>
+        <p class="card-text data">31 de outubro de 2022</p>
+        <h4 class="titulo">Electronic Arts fecha parceria com a <br>Marvel para três jogos de heróis, diz<br> reportagem</h4>
+        <p class="card-text descricao">Segundo a Bloomberg, EA Games fará outros dois<br> projetos secretos além do jogo do Homem de Ferro</p>
+      </div>
+    </div>
+  </div>
+</div>
+</article>
+</div>
+
+<div class="container">
+<article class="article-img-space-top">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="./images/god_of_war_r.png" class="img-fluid rounded-start pointer" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <p class="card-title games">Games</p>
+        <p class="card-text data">11 de outubro de 2022</p>
+        <h4 class="titulo">Sony Santa Monica pede que fãs<br> evitem spoilers de God of War<br> Ragnarok</h4>
+        <p class="card-text descricao">Novo jogo do Kratos chega às lojas no início de<br> novembro</p>
+      </div>
+    </div>
+  </div>
+</div>
+</article>
+</div>
+
+<div class="container">
+<article class="article-img-space-top">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="./images/the_witcher.png" class="img-fluid rounded-start pointer" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <p class="card-title games">Games</p>
+        <p class="card-text data">31 de outubro de 2022</p>
+        <h4 class="titulo">Primeiro The Witcher está gratuito para PC</h4>
+        <p class="card-text descricao">Para quem quer matar a saudade do jogo antes do remake</p>
+      </div>
+    </div>
+  </div>
+</div>
+</article>
+</div>
+
+
+  <article class="background">
+    <div class="criticas_reviews">
+      <div>
+        <h2 class="criticas-reviews">Críticas e Reviews</h2>
+        <h2 class="ver-mais" >Ver Mais -></h2>
+      </div>
+      <div class="card-group">
+        <div class="card">
+          <img src="./images/gow_review.png" class="card-img-top pointer" alt="...">
+          <div class="card-body interior">
+            <h5 class="card-title game">GAMES</h5>
+            <p class="card-text descricao_games">God of War Ragnarok | Review
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./images/stayout_review.png" class="card-img-top pointer" alt="...">
+          <div class="card-body interior">
+            <h5 class="card-title game">GAMES</h5>
+            <p class="card-text descricao_games">Stay Out of the House | Review</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./images/poster_new.png" class="card-img-top pointer" alt="...">
+          <div class="card-body interior">
+            <h5 class="card-title game">GAMES</h5>
+            <p class="card-text descricao_games">New Tales from the Borderlands | Review</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./images/capa_mw2.png" class="card-img-top pointer" alt="...">
+          <div class="card-body interior">
+            <h5 class="card-title game">GAMES</h5>
+            <p class="card-text descricao_games">Call of Duty: Modern Warfare II (single-player) | Review</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./images/mario_rabbids.png" class="card-img-top pointer" alt="...">
+          <div class="card-body interior">
+            <h5 class="card-title game">GAMES</h5>
+            <p class="card-text descricao_games">Mario + Rabbids Sparks of Hope | Review</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </article>
+
+  <div class="mais-noticias pointer">
+    <h2>Mais notícias =></h2>
+    <div class="widget-barra"></div>
+  </div>
+
+
+
+
+  <div class="container">
+  <article class="article-img-space-top">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="./images/jogos_indie.png" class="img-fluid rounded-start pointer" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <p class="card-title games">Games</p>
+          <p class="card-text data">31 de outubro de 2022</p>
+          <h4 class="titulo">13 jogos indie de terror para<br> assombrar o seu Halloween</h4>
+          <p class="card-text descricao">Maníacos mascarados, assombrações, demônios<br> e muito mais!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </article>
+  
+</div>
+  <div class="container">
+  <article class="article-img-space-top">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="./images/jogos_de_terror.png" class="img-fluid rounded-start pointer" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <p class="card-title games">Games</p>
+          <p class="card-text data">29 de outubro de 2022</p>
+          <h4 class="titulo">8 táticas de segurança para encarar<br> jogos de terror se você tem MUITO<br> medo</h4>
+          <p class="card-text descricao">Quer honrar o Halloween, mas se assusta fácil?<br> Temos algumas dicas!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </article>
+  
+</div>
+  <div class="container">
+  <article class="article-img-space-top">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="./images/multiversus_adao.png" class="img-fluid rounded-start pointer" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <p class="card-title games">Games</p>
+          <p class="card-text data">29 de outubro de 2022</p>
+          <h4 class="titulo">Adão Negro ganha data para estrear<br> em MultiVersus</h4>
+          <p class="card-text descricao">O herói será da classe Pugilista</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </article>
+</div>
+
+
+  <div class="container">
+  <article class="article-img-space-top">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="./images/v_rising_gratuito.png" class="img-fluid rounded-start pointer" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <p class="card-title games">Games</p>
+          <p class="card-text data">29 de outubro de 2022</p>
+          <h4 class="titulo">V Rising, jogo indie com vampiros,<br> está gratuito para jogar até segunda<br> (31)</h4>
+          <p class="card-text descricao">Saiba como participar para passar o Halloween com<br> game de graça</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </article>
+  
+</div>
+  <div class="container">
+  <article class="article-img-space-top">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="./images/finalfantasy.png" class="img-fluid rounded-start pointer" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <p class="card-title games">Games</p>
+          <p class="card-text data">29 de outubro de 2022</p>
+          <h4 class="titulo">Franquia Final Fantasy já vendeu<br> mais de 173 milhões de cópias</h4>
+          <p class="card-text descricao">13,9 milhões são apenas da saga Final Fantasy VII</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </article>
+</div>
+
+  <div class="container">
+  <article class="article-img-space-top">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="./images/genesis.png" class="img-fluid rounded-start pointer" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <p class="card-title games">Games</p>
+          <p class="card-text data">3 de outubro de 2022</p>
+          <h4 class="titulo">Genesis Alpha One, roguelike de<br> terror no espaço, está gratuito para<br> PC</h4>
+          <p class="card-text descricao">Saiba como resgatar uma cópia</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </article>
+</div>
+
+  <div class="container">
+  <article class="article-img-space-top">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="./images/sonic.png" class="img-fluid rounded-start pointer" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <p class="card-title games">Games</p>
+          <p class="card-text data">29 de Outubro de 2022</p>
+          <h4 class="titulo">Franquia Sonic ultrapassa marca de<br> 1,51 bilhão de jogos vendidos</h4>
+          <p class="card-text descricao">Muitos soniqueiros pelo mundo inteiro!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </article>
+</div>
+  <div class="container">
+  <article class="article-img-space-top">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="./images/bloodborne.png" class="img-fluid rounded-start pointer" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <p class="card-title games">Ciência e Tecnologia</p>
+          <p class="card-text data">30 de setembro de 2022</p>
+          <h4 class="titulo">Bloodborne, Call of Cthulhu e mais:<br> 11 jogos de horror cósmico para<br> cultuar no Halloween</h4>
+          <p class="card-text descricao">Um pouquinho de H.P. Lovecraft para celebrar o Dia<br> das Bruxas!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </article>
+</div>
+
+  <div class="d-grid gap-2 col-6 mx-auto">
+    <button class="btn btn-primary btnCarregar" type="button">Carregar mais notícias</button>
+  </div>
+
+  </body>
+</html>

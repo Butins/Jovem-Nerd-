@@ -1,0 +1,358 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+* {
+  font-family: "Inter", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+body {
+  transition: 0.2s ease-in-out;
+  background-color: white;
+  color: black;
+}
+
+.dark-mode {
+  transition: 0.2s ease-in-out;
+  background-color: #1e1e26;
+  color: white;
+}
+
+.dark-blue {
+  color: #3bb4b4;
+}
+
+.header-main {
+  background-color: #1e1e26;
+  width: 100%;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: white;
+}
+.logo {
+  margin-left: 15px;
+  margin-top: 15px;
+  width: 140px;
+  height: 80px;
+}
+.list,
+.list2 {
+  list-style: none;
+  display: flex;
+  margin-right: 30px;
+}
+.list li {
+  margin-left: 30px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.list2 li {
+  margin-left: 30px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.ia:hover {
+  transition: 0.2s ease-in-out;
+  transform: rotate(180deg);
+}
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  border: 1px solid white;
+  border-radius: 30px;
+  height: 30px;
+  width: 280px;
+}
+.search input {
+  background-color: transparent;
+  text-indent: 7px;
+  width: 170px;
+  border: none;
+  display: flex;
+  color: white;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: bold;
+}
+.search button {
+  border: none;
+  background-color: #3bb4b4;
+  color: white;
+  width: 199px;
+  height: 28px;
+  border-radius: 17px;
+  padding-left: 9px;
+  margin-left: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 3px;
+  transform: translateX(1px);
+}
+input:focus {
+  outline: 0;
+}
+
+#darkmode {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  background-color: transparent;
+  color: gray;
+}
+.modo-escuro {
+  color: gray;
+}
+.submenu {
+  background-color: #14141c;
+  position: flex;
+  width: 100%;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: #3bb4b4;
+}
+.submenu-off {
+  display: none;
+}
+.separator {
+  width: 300px;
+  height: 100%;
+}
+.separator-main {
+  margin-top: 23px;
+  margin-right: 90px;
+}
+.separator-main p {
+  font-size: 16px;
+  color: #747478;
+}
+.separator-main h1 {
+  font-size: 47px;
+  line-height: 30px;
+  color: #1e1e26 !important;
+  margin-bottom: 12px;
+  font-weight: bold;
+  font-family: "Inter", sans-serif;
+}
+
+.nerdbunker {
+  width: 180px;
+}
+.list2 {
+  margin-top: 13px;
+}
+
+.dropdown-content {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #1e1e26;
+  position: absolute;
+  width: 250px;
+  display: none;
+  transition: 0.2s ease-in-out;
+  margin-top: 2px;
+}
+.dropdown-content ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  width: 200px;
+  transition: 0.2s ease-in-out;
+}
+.dropdown-content li {
+  width: 200px;
+  margin: 10px 0px 10px 0px;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+  height: 40px;
+  color: white;
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  border-bottom: 1px solid rgb(29, 28, 28);
+}
+.dropdown-content a {
+  text-decoration: none;
+  color: white;
+}
+.round {
+  height: 20px;
+  width: 6px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+
+#r1 {
+  background-color: turquoise;
+}
+#r2 {
+  background-color: rgb(255, 50, 50);
+}
+#r3 {
+  background-color: rgb(50, 255, 100);
+}
+#r4 {
+  background-color: rgb(163, 16, 163);
+}
+#r5 {
+  background-color: pink;
+}
+#r6 {
+  background-color: goldenrod;
+}
+#r7 {
+  background-color: rgb(51, 64, 189);
+}
+#r8 {
+  background-color: turquoise;
+}
+
+.border-blue {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 45px;
+  border-radius: 6px;
+  vertical-align: middle;
+  margin-top: -3px;
+  background-color: #82af69;;
+}
+.article {
+  width: 85%;
+  margin-top: 25px;
+  margin-left: 7%;
+  border-radius: 10px;
+}
+.article-img-space-top {
+  width: 85%;
+  margin-top: 50px;
+  margin-left: 7%;
+  border-radius: 10px;
+}
+
+.games {
+  color: #82af69;
+  font-weight: bold;
+  padding-top: 3px;
+  margin-left: 10px;
+}
+.data {
+  margin-left: 10px;
+  padding-top: 5px;
+  color: #747478;
+}
+.titulo {
+  margin-left: 10px;
+  font-weight: bold;
+}
+.descricao {
+  margin-left: 10px;
+  font-style: italic;
+  color: #747478;
+  font-size: 16px;
+}
+
+.criticas_reviews {
+  display: inline-block;
+  margin-top: 1%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.background {
+  background-color: #1e1e26;
+  text-align: left;
+  margin-top: 7%;
+}
+.background h2 {
+  display: inline-block;
+  color: #3bb4b4;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 27px;
+  font-weight: bold;
+}
+
+.game {
+  color: #82af69;
+  font-size: 17px;
+  font-weight: bold;
+}
+.descricao_games {
+  font-weight: bold;
+  font-size: 19px;
+  color: white;
+}
+
+.criticas-reviews {
+  text-align: left;
+}
+.ver-mais {
+  text-align: right;
+  margin-left: 59%;
+  cursor: pointer;
+}
+.interior {
+  background-color: #1e1e26;
+}
+.pointer {
+  cursor: pointer;
+}
+.mais-noticias h2 {
+  display: inline-block;
+  margin-top: 50px;
+  margin-left: 7%;
+  color: #3bb4b4;
+  font-weight: bold;
+  font-size: 25px;
+}
+.widget-barra {
+  display: inline-block;
+  margin-bottom: 5px;
+  width: 50px;
+  height: 5px;
+  border-radius: 5px;
+  background-color: #36a9e1;
+  margin-top: 10px;
+  transition: all 0.5s linear;
+}
+.widget-barra:hover {
+  width: 73%;
+}
+.btnCarregar{
+  width: 50%;
+  margin-top: 6%;
+  margin-left: 10%;
+  background-color: #36a9e1 !important;
+  border-radius: 50px !important;
+  border: 1px solid #36a9e1 !important;
+  margin-bottom: 10%;
+  font-weight: bold !important;
+  font-size: 20px !important;
+}
+.btnCarregar:hover{
+  border: 2px solid rgb(0, 100, 200) !important;
+}
